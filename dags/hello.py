@@ -1,5 +1,5 @@
 from airflow import DAG
-from airflow.operators.bash import BashOperator
+from airflow.providers.standard.operators.bash import BashOperator
 from datetime import datetime, timedelta
 
 default_args = {
@@ -16,13 +16,13 @@ dag = DAG(
 
 task1 = BashOperator(
     task_id = 'hello_world',
-    bash_command = 'echo "Hello World',
+    bash_command = 'echo "Hello World"',
     dag = dag
 )
 
 task2 = BashOperator(
     task_id = 'hello_dml',
-    bash_command = 'echo "Hello Data Mastery Lab',
+    bash_command = 'echo "Hello Data Mastery Lab"',
     dag = dag
 )
 
