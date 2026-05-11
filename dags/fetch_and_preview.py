@@ -8,7 +8,7 @@ def get_data(**kwargs):
     url = 'https://raw.githubusercontent.com/airscholar/ApacheFlink-SalesAnalytics/main/output/new-output.csv'
     
     # Fetch data from URL
-    response = request.get(url)
+    response = requests.get(url)
     
     if response.status_code == 200:
         
