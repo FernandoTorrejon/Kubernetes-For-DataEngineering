@@ -2,6 +2,7 @@ from airflow import DAG
 from airflow.providers.standard.operators.python import PythonOperator
 import requests
 import pandas as pd
+import json
 from datetime import datetime, timedelta
 
 def get_data(**kwargs):
